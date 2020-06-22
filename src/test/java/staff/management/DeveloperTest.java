@@ -27,6 +27,12 @@ public class DeveloperTest {
     }
 
     @Test
+    public void canSetName__nullWarning(){
+        developer1.setName("");
+        assertEquals("Give me a name!", developer1.getName());
+    }
+
+    @Test
     public void canGetNI(){
         developer1.getNI();
         assertEquals("1A",developer1.getNI());

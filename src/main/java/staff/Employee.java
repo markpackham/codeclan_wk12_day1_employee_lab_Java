@@ -17,7 +17,12 @@ public abstract class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name.equals("")){
+            this.name = "Give me a name!";
+        }
+        else{
+            this.name = name;
+        }
     }
 
     public String getNI() {
