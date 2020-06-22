@@ -21,6 +21,18 @@ public class ManagerTest {
     }
 
     @Test
-    public void setDeptName() {
+    public void canSetDeptName() {
+        manager1.setDeptName("Welsh");
+        assertEquals("Welsh", manager1.getDeptName());
     }
+    
+    @Test
+    public void canRaiseSalary(){
+        manager1.raiseSalary(100.0);
+        assertEquals(101.0,manager1.getSalary(),0.01);
+    }
+
+    
+    
+
 }
