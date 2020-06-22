@@ -56,6 +56,12 @@ public class DeveloperTest {
     }
 
     @Test
+    public void canRaiseSalary__ignore_negative(){
+        developer1.raiseSalary(-1000.111);
+        assertEquals(1.0,developer1.getSalary(),0.01);
+    }
+
+    @Test
     public void canPayBonus(){
         assertEquals(0.01, developer1.payBonus(),0.01);
     }
